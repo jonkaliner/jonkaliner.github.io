@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title and page.title != site.title %}{{ page.title }} – {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{{ page.description | default: page.excerpt | default: site.description | strip_html | strip_newlines | truncate: 160 }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  {% feed_meta %}
+</head>
+<body>
+  <header class="masthead">
+    <nav>
+      <a class="site-title" href="{{ '/' | relative_url }}">Jon Kaliner</a>
+      <a {% if page.nav == "about" %}class="active" {% endif %}href="{{ '/' | relative_url }}">About</a>
+      <a {% if page.nav == "blog" or page.layout == "post" %}class="active" {% endif %}href="{{ '/blog/' | relative_url }}">Blog</a>
+      <a {% if page.nav == "cv" %}class="active" {% endif %}href="{{ '/cv.html' | relative_url }}">CV</a>
+    </nav>
+  </header>
+
+  <div class="wrapper">
+    {% include sidebar.html %}
+    <main class="content">
+      {{ content }}
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    &copy; {{ site.time | date: "%Y" }} Jon Kaliner · <a href="{{ '/blog/feed.xml' | relative_url }}">RSS</a> · Hosted on <a href="https://pages.github.com/">GitHub Pages</a>
+  </footer>
+</body>
+</html>

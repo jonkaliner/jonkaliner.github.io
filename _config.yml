@@ -1,0 +1,27 @@
+title: Jon Kaliner
+description: M.Sc. Electrical Engineering student at TU Munich and Working Student in Corporate Strategy at NXP Semiconductors.
+author: Jon Kaliner
+url: https://jonkaliner.github.io
+baseurl: ""
+
+permalink: /blog/:year/:month/:day/:title/
+markdown: kramdown
+timezone: Europe/Berlin
+
+plugins:
+  - jekyll-feed
+
+feed:
+  path: blog/feed.xml
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+
+exclude:
+  - README.md
+  - Bewerbungsfoto.jpg
+  - CV.pdf
