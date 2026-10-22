@@ -1,3 +1,8 @@
 # Originals – the site uses images/profile.jpg and files/CV.pdf
 /Bewerbungsfoto.jpg
 /CV.pdf
+
+# Jekyll build output
+_site/
+.sass-cache/
+.jekyll-cache/

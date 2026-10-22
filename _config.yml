@@ -1,27 +1,169 @@
-title: Jon Kaliner
-description: M.Sc. Electrical Engineering student at TU Munich and Working Student in Corporate Strategy at NXP Semiconductors.
-author: Jon Kaliner
-url: https://jonkaliner.github.io
-baseurl: ""
+# Site settings – based on the AcademicPages theme (https://github.com/academicpages/academicpages.github.io)
+# This file is NOT reloaded automatically when using `jekyll serve`; restart the server after changes.
 
-permalink: /blog/:year/:month/:day/:title/
+locale                   : "en-US"
+title                    : "Jon's homepage"
+title_separator          : "-"
+name                     : "Jon Kaliner"
+description              : "M.Sc. Electrical Engineering student at TU Munich and Working Student in Corporate Strategy at NXP Semiconductors."
+url                      : "https://jonkaliner.github.io"
+baseurl                  : "" # user site is served at the root
+repository               : "jonkaliner/jonkaliner.github.io"
+teaser                   :
+breadcrumbs              : false
+words_per_minute         : 160
+future                   : true
+read_more                : "disabled"
+talkmap_link             : false
+comments:
+  provider               : false
+atom_feed:
+  path                   : # blank (default) uses feed.xml
+
+# Social Sharing
+twitter:
+  username               :
+facebook:
+  username               :
+  app_id                 :
+  publisher              :
+og_image                 : "profile.jpg"
+social:
+  type                   : Person
+  name                   :
+  links:
+    - "https://www.linkedin.com/in/jon-kaliner-36310b1b5/"
+    - "https://github.com/jonkaliner"
+
+# Analytics
+analytics:
+  provider               : false
+
+
+# Site Author (shown in the sidebar)
+author:
+  name             : "Jon Kaliner"
+  avatar           : "profile.jpg"
+  bio              : "M.Sc. Electrical Engineering student at TU Munich. Battery technology, power electronics and deep-tech startups."
+  location         : "Munich, Germany"
+  employer         : "NXP Semiconductors / TU Munich"
+  email            : "jon.kaliner@tum.de"
+  github           : "jonkaliner"
+  linkedin         : "jon-kaliner-36310b1b5"
+  googlescholar    :
+  orcid            :
+  researchgate     :
+  twitter          :
+
+
+# Reading Files
+include:
+  - .htaccess
+  - _pages
+  - files
+exclude:
+  - "*.sublime-project"
+  - "*.sublime-workspace"
+  - .asset-cache
+  - .bundle
+  - .jekyll-assets-cache
+  - .sass-cache
+  - Gemfile
+  - LICENSE
+  - README.md
+  - Bewerbungsfoto.jpg
+  - CV.pdf
+  - assets/js/_main.js
+  - assets/js/plugins
+  - assets/js/vendor
+  - node_modules
+  - package.json
+  - vendor
+keep_files:
+  - .git
+  - .svn
+encoding: "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+
+
+# Conversion
 markdown: kramdown
-timezone: Europe/Berlin
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
 
-plugins:
-  - jekyll-feed
 
-feed:
-  path: blog/feed.xml
+# Markdown Processing
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
 
+
+# Defaults
 defaults:
+  # _posts
   - scope:
       path: ""
       type: posts
     values:
-      layout: post
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: false
+      share: true
+      related: true
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
 
-exclude:
-  - README.md
-  - Bewerbungsfoto.jpg
-  - CV.pdf
+# Sass/SCSS
+sass:
+  sass_dir: _sass
+  style: compressed
+
+
+# Outputting
+permalink: /posts/:year/:month/:title/
+timezone: Europe/Berlin
+
+
+# Plugins
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jekyll-redirect-from
+whitelist:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+
+
+# Archives
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
+
+
+# HTML Compression
+compress_html:
+  clippings: all
+  ignore:
+    envs: development

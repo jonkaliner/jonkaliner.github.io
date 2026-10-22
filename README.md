@@ -1,6 +1,7 @@
 # Jon Kaliner – Personal Website
 
 Live at **https://jonkaliner.github.io/** – built automatically by GitHub Pages (Jekyll) on every push to `main`.
+Design: the [AcademicPages](https://github.com/academicpages/academicpages.github.io) theme (MIT, see `LICENSE`).
 
 ## Writing a blog post
 
@@ -11,22 +12,26 @@ Live at **https://jonkaliner.github.io/** – built automatically by GitHub Page
    ```markdown
    ---
    title: "Why batteries matter"
-   tags: [engineering, energy]
+   date: 2026-11-02
+   tags:
+     - engineering
+     - energy
    ---
 
    Your text here. **Bold**, *italic*, [links](https://example.com), lists, quotes …
    ```
 
-3. Commit / push. The post shows up at `/blog/` after a minute or two.
+3. Commit / push. The post shows up under **Blog Posts** after a minute or two.
 
 The first paragraph is used as the preview on the blog page. To add images, put them in `images/` and use `![description](/images/file.jpg)`.
 
-## Structure
+## Where things live
 
-- `index.html` – About page
-- `cv.html` – CV page
-- `blog/index.html` – list of all posts
+- `_pages/about.md` – home page (About)
+- `_pages/cv.md` – CV page
+- `_pages/year-archive.html` – "Blog Posts" page (all posts by year)
 - `_posts/` – blog posts (Markdown)
-- `_layouts/`, `_includes/` – shared page layout and sidebar
-- `assets/css/style.css` – styles
+- `_data/navigation.yml` – top menu links
+- `_config.yml` – name, sidebar info (bio, location, links), site settings
 - `images/profile.jpg`, `files/CV.pdf` – profile picture and downloadable CV
+- `_layouts/`, `_includes/`, `_sass/`, `assets/` – theme files
