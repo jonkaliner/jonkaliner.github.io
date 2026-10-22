@@ -6,7 +6,6 @@ author_profile: true
 redirect_from:
   - /about/
   - /about.html
-  - /index.html
 ---
 
 🎓 I'm a Master's student in Electrical Engineering at the [Technical University of Munich](https://www.tum.de/en/), focusing on battery technology and power electronics.
